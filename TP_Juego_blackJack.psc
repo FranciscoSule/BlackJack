@@ -1,5 +1,20 @@
 Algoritmo TP_logicayestructura
 	// Declarar variables
+	Definir cartas Como Caracter
+	Dimension cartas[13]
+	cartas[0] = 'A'
+	cartas[1] = '2'
+	cartas[2] = '3'
+	cartas[3] = '4'
+	cartas[4] = '5'
+	cartas[5] = '6'
+	cartas[6] = '7'
+	cartas[7] = '8'
+	cartas[8] = '9'
+	cartas[9] = '10'
+	cartas[10] = 'J'
+	cartas[11] = 'Q'
+	cartas[12] = 'K'
 	
 	// darle valor a las cartas
 	// A = 1 o 11 preguntarle al usuario que valor toma
