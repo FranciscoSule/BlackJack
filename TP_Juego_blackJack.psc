@@ -54,3 +54,14 @@ Algoritmo TP_logicayestructura
 FinAlgoritmo
 
 //declarar funciones
+
+Funcion iniciarJuego()
+	definir carta1, carta2 como entero
+	
+	carta1<-azar(13)
+	carta2<-azar(13)
+	
+	Mostrar carta1
+	Mostrar carta2
+	
+FinFuncion
