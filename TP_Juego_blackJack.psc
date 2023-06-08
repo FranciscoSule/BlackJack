@@ -1,16 +1,22 @@
 Algoritmo TP_logicayestructura
 	// Declarar variables
 	Definir cartas Como Caracter
-	Definir valores, carturri, i, carta1, carta2 Como Entero
+	Definir valores, carturri, i, carta1, carta2, puntos Como Entero
 	Dimension cartas[13]
 	Dimension valores[13]
-	carturri=0
-	carta1=0
+	puntos=0
+	
+	
 	
 	
 	carta1=iniciarJuego()
+	puntos= puntos + carta1
 	Escribir " "
 	carta2=iniciarJuego()
+	puntos= puntos + carta2
+	
+	
+	Mostrar puntos
 	
 	
 	// darle valor a las cartas
@@ -35,7 +41,7 @@ FinAlgoritmo
 
 Funcion a = iniciarJuego ()
 	Definir cartas Como Caracter
-	Definir valores, carturri Como Entero
+	Definir valores, carturri, puntos Como Entero
 	carturri=0
 	Dimension cartas[13]
 	Dimension valores[13]
@@ -68,6 +74,7 @@ Funcion a = iniciarJuego ()
 	cartas[11] = 'Q'
 	cartas[12] = 'K'
 	carturri=azar(13)
-	Escribir "Tu carta fue " cartas[carturri] " Que vale "  valores[carturri] 		
+	Escribir "Tu carta fue " cartas[carturri] " Que vale "  valores[carturri] 	
+	puntos= valores[carturri]
 	
 FinFuncion
