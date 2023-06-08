@@ -2,10 +2,39 @@ Algoritmo TP_logicayestructura
 	// Declarar variables
 	Definir cartas Como Caracter
 	Definir valores, carturri, i, carta1, carta2, puntos Como Entero
-	Dimension cartas[13]
-	Dimension valores[13]
+	
 	puntos=0
 	
+	Dimension cartas[13]
+	Dimension valores[13]
+	
+	valores[0] = 1
+	valores[1] = 2
+	valores[2] = 3
+	valores[3] = 4
+	valores[4] = 5
+	valores[5] = 6
+	valores[6] = 7
+	valores[7] = 8
+	valores[8] = 9
+	valores[9] = 10
+	valores[10] = 10
+	valores[11] = 10
+	valores[12] = 10
+	
+	cartas[0] = "A"
+	cartas[1] = '2'
+	cartas[2] = '3'
+	cartas[3] = '4'
+	cartas[4] = '5'
+	cartas[5] = '6'
+	cartas[6] = '7'
+	cartas[7] = '8'
+	cartas[8] = '9'
+	cartas[9] = '10'
+	cartas[10] = 'J'
+	cartas[11] = 'Q'
+	cartas[12] = 'K'
 	
 	
 	
