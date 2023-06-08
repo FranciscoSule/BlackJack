@@ -1,5 +1,5 @@
 Algoritmo TP_logicayestructura
-	// Declarar variables
+	
 	Definir cartas, pedido Como Caracter
 	Definir valores, num_aleatorio, i, carta1, carta2, carta3, puntos, ingreso Como Entero
 	ingreso=0
@@ -22,8 +22,6 @@ Algoritmo TP_logicayestructura
 	valores[11] = 10
 	valores[12] = 10
 	
-
-	
 	cartas[0] = "A"
 	cartas[1] = '2'
 	cartas[2] = '3'
@@ -38,38 +36,33 @@ Algoritmo TP_logicayestructura
 	cartas[11] = 'Q'
 	cartas[12] = 'K'
 	
-	para i=0 hasta 1 Con Paso 1 Hacer
+	Para i=0 hasta 1 Con Paso 1 Hacer
 		num_aleatorio=azar(13)
 		
-		si num_aleatorio = 0 Entonces
+		Si num_aleatorio = 0 Entonces
 			Escribir 'Tu carta es A elija su valor : 1 o 11'
 			leer ingreso
 			
-			si ingreso <> 1 y ingreso <> 11 Entonces
-				
+			Si ingreso <> 1 y ingreso <> 11 Entonces
 				Escribir 'Error: Ingrese un valor válido (1 o 11)'
+				
 				Repetir
 					Leer ingreso
 				Hasta Que ingreso = 1 o ingreso = 11
-				
 			FinSi
 			
-			
-			
-			si ingreso = 11 Entonces
+			Si ingreso = 11 Entonces
 				puntos= puntos+ingreso-1
 			FinSi
-			
-		SiNo
+		FinSi
+		
+		Si ingreso=11 Entonces
+			Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale 11" 
+		Sino
+			Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale "  valores[num_aleatorio] 
 			
 		FinSi
 		
-		si ingreso=11 Entonces
-			Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale 11" 
-			sino
-				Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale "  valores[num_aleatorio] 
-				
-		FinSi
 		puntos=puntos+valores[num_aleatorio]
 		ingreso=0
 	FinPara
@@ -77,63 +70,51 @@ Algoritmo TP_logicayestructura
 	Escribir " "
 	Escribir "Tu cantidad de puntos " puntos
 	
-	si puntos = 21 Entonces
+	Si puntos = 21 Entonces
 		Escribir 'BlackJack ¡HAS GANADO!'
 	SiNo
-		si puntos < 21 Entonces
-			
+		Si puntos < 21 Entonces
 			Repetir
 				Escribir '¿Quieres otra carta?'
 				Escribir 'Ingresar S si quiere o P para plantarse'
 				leer pedido
 				
-				si pedido = 'S' o pedido = 's' Entonces
+				Si pedido = 'S' o pedido = 's' Entonces
 					carta3 = azar(13)
 					Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale "  valores[num_aleatorio]
 					puntos= puntos+valores[num_aleatorio]
 					Mostrar puntos
-					
-					si puntos = 21 Entonces
-						pedido='p'
-						Escribir 'BlackJack ¡HAS GANADO!'
-						
-					FinSi
-					
-					si puntos >21 Entonces
-						Escribir 'Perdiste'
-						pedido='p'
-					FinSi
-					
-
+				FinSi
+				
+				Si puntos = 21 Entonces
+					pedido='p'
+					Escribir 'BlackJack ¡HAS GANADO!'
 					
 				FinSi
-					
 				
+				Si puntos >21 Entonces
+					Escribir 'Perdiste'
+					pedido='p'
+				FinSi									
 			Hasta Que pedido = 'p' o pedido = 'P'
-			
 			Mostrar puntos
 		FinSi
-		
-	
-		
 	FinSi
 	
-	// darle valor a las cartas
-	// A = 1 o 11 preguntarle al usuario que valor toma
-	// 2-10 cartas normales
-	// J Q K valor 10
-	// crear un array que contenga los valores 2-10
-	// crear un array con las letras 
-	// si tocan 2 A al jugador uno solo se toma como valor 11
-	// declarar funcion repartir()  con la funcion azar() toma un numero del array
-	// si casa pasa los 21 pierde casa
-	// casa si toca A es siempre 11 la primera
-	// si jugador pasa los 21 pierde jugador
-	// declarar Funcion inicioJuego() reparte dos cartas al jugador
-	// preguntarle al usuario si pide carta / que responda S si quiere o P de plantarse
+	//Hay un error que cuando elegis que el as valga 1 y seguis pidiendo cartas, todas valen 1
 	
+	//Hay que hacer la casa
 	
+    //La casa recibe dos cartas, Si tiene 16 o menos, está obligada a pedir otra carta. 
+	//Si tiene 17 o más se tiene que plantar
 	
+	//La casa le gana a todos los jugadores que se pasen de 21, y a todos aquellos que tengan 
+	// una mano de menor valor que la suya. Si tiene 19 puntos, por ejemplo, le gana a todos 
+	// los que tengan 18 o menos y 22 o más.
+	
+	// Pierde con los jugadores que tengan una mano superior, y con todos los que se hayan 
+	// plantado en el caso de que exceda los 21 puntos. El empate en blackjack, se da entre 
+	// la banca y los jugadores que tengan la misma cantidad de puntos.
 FinAlgoritmo
 
-//declarar funciones
+
