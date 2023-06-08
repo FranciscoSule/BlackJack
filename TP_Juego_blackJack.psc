@@ -1,8 +1,8 @@
 Algoritmo TP_logicayestructura
 	// Declarar variables
-	Definir cartas Como Caracter
-	Definir valores, carturri, i, carta1, carta2, puntos Como Entero
-	
+	Definir cartas, pedido Como Caracter
+	Definir valores, num_aleatorio, i, carta1, carta2, carta3, puntos, ingreso Como Entero
+	ingreso=0
 	puntos=0
 	
 	Dimension cartas[13]
@@ -37,14 +37,55 @@ Algoritmo TP_logicayestructura
 	cartas[12] = 'K'
 	
 	para i=0 hasta 1 Con Paso 1 Hacer
-		carturri=azar(13)
-		Escribir "Tu carta fue " cartas[carturri] " Que vale "  valores[carturri] 
-		puntos=puntos+valores[carturri]
+		num_aleatorio=azar(13)
+		
+		si num_aleatorio = 0 Entonces
+			Escribir 'Tu carta es A elija su valor : 1 o 11'
+			leer ingreso
+			si ingreso = 11 Entonces
+				puntos= puntos+ingreso-1
+			FinSi
+			
+		SiNo
+			
+		FinSi
+		
+		si ingreso=11 Entonces
+			Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale 11"
+			sino
+				Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale "  valores[num_aleatorio] 
+				
+		FinSi
+		puntos=puntos+valores[num_aleatorio]
 	FinPara
 	
 	Escribir " "
 	Escribir "Tu cantidad de puntos " puntos
 	
+	si puntos = 21 Entonces
+		Escribir 'BlackJack ¡HAS GANADO!'
+	SiNo
+		si puntos < 21 Entonces
+			
+			Repetir
+				Escribir '¿Quieres otra carta?'
+				Escribir 'Ingresar S si quiere o P para plantarse'
+				leer pedido
+				
+				si pedido = 'S' o pedido = 's' Entonces
+					carta3 = azar(13)
+					Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale "  valores[num_aleatorio]
+					puntos= puntos+valores[num_aleatorio]
+					Mostrar puntos
+				FinSi
+					
+				
+			Hasta Que pedido = 'p' o pedido = 'P'
+		FinSi
+		
+	
+		
+	FinSi
 	
 	// darle valor a las cartas
 	// A = 1 o 11 preguntarle al usuario que valor toma
