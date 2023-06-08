@@ -44,6 +44,18 @@ Algoritmo TP_logicayestructura
 		si num_aleatorio = 0 Entonces
 			Escribir 'Tu carta es A elija su valor : 1 o 11'
 			leer ingreso
+			
+			si ingreso <> 1 y ingreso <> 11 Entonces
+				
+				Escribir 'Error: Ingrese un valor válido (1 o 11)'
+				Repetir
+					Leer ingreso
+				Hasta Que ingreso = 1 o ingreso = 11
+				
+			FinSi
+			
+			
+			
 			si ingreso = 11 Entonces
 				puntos= puntos+ingreso-1
 			FinSi
