@@ -22,6 +22,8 @@ Algoritmo TP_logicayestructura
 	valores[11] = 10
 	valores[12] = 10
 	
+
+	
 	cartas[0] = "A"
 	cartas[1] = '2'
 	cartas[2] = '3'
@@ -51,12 +53,13 @@ Algoritmo TP_logicayestructura
 		FinSi
 		
 		si ingreso=11 Entonces
-			Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale 11"
+			Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale 11" 
 			sino
 				Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale "  valores[num_aleatorio] 
 				
 		FinSi
 		puntos=puntos+valores[num_aleatorio]
+		ingreso=0
 	FinPara
 	
 	Escribir " "
@@ -77,10 +80,26 @@ Algoritmo TP_logicayestructura
 					Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale "  valores[num_aleatorio]
 					puntos= puntos+valores[num_aleatorio]
 					Mostrar puntos
+					
+					si puntos = 21 Entonces
+						pedido='p'
+						Escribir 'BlackJack ¡HAS GANADO!'
+						
+					FinSi
+					
+					si puntos >21 Entonces
+						Escribir 'Perdiste'
+						pedido='p'
+					FinSi
+					
+
+					
 				FinSi
 					
 				
 			Hasta Que pedido = 'p' o pedido = 'P'
+			
+			Mostrar puntos
 		FinSi
 		
 	
