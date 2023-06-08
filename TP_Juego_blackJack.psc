@@ -1,51 +1,16 @@
 Algoritmo TP_logicayestructura
 	// Declarar variables
 	Definir cartas Como Caracter
-	Definir valores , puntos, carta1, carta2 Como Entero
-	puntos = 0
-	carta1=azar(13)
-	carta2=azar(13)
+	Definir valores, carturri, i, carta1, carta2 Como Entero
 	Dimension cartas[13]
 	Dimension valores[13]
+	carturri=0
+	carta1=0
 	
-	//Nombre cartas
-	cartas[0] = 'A'
-	cartas[1] = '2'
-	cartas[2] = '3'
-	cartas[3] = '4'
-	cartas[4] = '5'
-	cartas[5] = '6'
-	cartas[6] = '7'
-	cartas[7] = '8'
-	cartas[8] = '9'
-	cartas[9] = '10'
-	cartas[10] = 'J'
-	cartas[11] = 'Q'
-	cartas[12] = 'K'
 	
-	// Valores cartas
-	valores[0] = 1
-	valores[1] = 2
-	valores[2] = 3
-	valores[3] = 4
-	valores[4] = 5
-	valores[5] = 6
-	valores[6] = 7
-	valores[7] = 8
-	valores[8] = 9
-	valores[9] = 10
-	valores[10] = 10
-	valores[11] = 10
-	valores[12] = 10
-	
-//	carta1<-azar(13)
-	//	carta2<-azar(13)
-	
-	Mostrar 'Tu cata 1 es: ' cartas[carta1]
-	puntos= puntos+valores[carta1]
-	Mostrar 'Tu cata 1 es: ' cartas[carta2]
-	puntos= puntos+valores[carta2]
-	Mostrar 'Puntos actuales: ' puntos
+	carta1=iniciarJuego()
+	Escribir " "
+	carta2=iniciarJuego()
 	
 	
 	// darle valor a las cartas
@@ -68,4 +33,41 @@ FinAlgoritmo
 
 //declarar funciones
 
-
+Funcion a = iniciarJuego ()
+	Definir cartas Como Caracter
+	Definir valores, carturri Como Entero
+	carturri=0
+	Dimension cartas[13]
+	Dimension valores[13]
+	
+	valores[0] = 1
+	valores[1] = 2
+	valores[2] = 3
+	valores[3] = 4
+	valores[4] = 5
+	valores[5] = 6
+	valores[6] = 7
+	valores[7] = 8
+	valores[8] = 9
+	valores[9] = 10
+	valores[10] = 10
+	valores[11] = 10
+	valores[12] = 10
+	
+	cartas[0] = "A"
+	cartas[1] = '2'
+	cartas[2] = '3'
+	cartas[3] = '4'
+	cartas[4] = '5'
+	cartas[5] = '6'
+	cartas[6] = '7'
+	cartas[7] = '8'
+	cartas[8] = '9'
+	cartas[9] = '10'
+	cartas[10] = 'J'
+	cartas[11] = 'Q'
+	cartas[12] = 'K'
+	carturri=azar(13)
+	Escribir "Tu carta fue " cartas[carturri] " Que vale "  valores[carturri] 		
+	
+FinFuncion
