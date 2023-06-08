@@ -36,16 +36,14 @@ Algoritmo TP_logicayestructura
 	cartas[11] = 'Q'
 	cartas[12] = 'K'
 	
+	para i=0 hasta 1 Con Paso 1 Hacer
+		carturri=azar(13)
+		Escribir "Tu carta fue " cartas[carturri] " Que vale "  valores[carturri] 
+		puntos=puntos+valores[carturri]
+	FinPara
 	
-	
-	carta1=iniciarJuego()
-	puntos= puntos + carta1
 	Escribir " "
-	carta2=iniciarJuego()
-	puntos= puntos + carta2
-	
-	
-	Mostrar puntos
+	Escribir "Tu cantidad de puntos " puntos
 	
 	
 	// darle valor a las cartas
@@ -67,43 +65,3 @@ Algoritmo TP_logicayestructura
 FinAlgoritmo
 
 //declarar funciones
-
-Funcion a = iniciarJuego ()
-	Definir cartas Como Caracter
-	Definir valores, carturri, puntos Como Entero
-	carturri=0
-	Dimension cartas[13]
-	Dimension valores[13]
-	
-	valores[0] = 1
-	valores[1] = 2
-	valores[2] = 3
-	valores[3] = 4
-	valores[4] = 5
-	valores[5] = 6
-	valores[6] = 7
-	valores[7] = 8
-	valores[8] = 9
-	valores[9] = 10
-	valores[10] = 10
-	valores[11] = 10
-	valores[12] = 10
-	
-	cartas[0] = "A"
-	cartas[1] = '2'
-	cartas[2] = '3'
-	cartas[3] = '4'
-	cartas[4] = '5'
-	cartas[5] = '6'
-	cartas[6] = '7'
-	cartas[7] = '8'
-	cartas[8] = '9'
-	cartas[9] = '10'
-	cartas[10] = 'J'
-	cartas[11] = 'Q'
-	cartas[12] = 'K'
-	carturri=azar(13)
-	Escribir "Tu carta fue " cartas[carturri] " Que vale "  valores[carturri] 	
-	puntos= valores[carturri]
-	
-FinFuncion
