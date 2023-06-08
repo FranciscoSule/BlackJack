@@ -1,7 +1,10 @@
 Algoritmo TP_logicayestructura
 	// Declarar variables
 	Definir cartas Como Caracter
-	Definir valores Como Entero
+	Definir valores , puntos, carta1, carta2 Como Entero
+	puntos = 0
+	carta1=azar(13)
+	carta2=azar(13)
 	Dimension cartas[13]
 	Dimension valores[13]
 	
@@ -35,6 +38,16 @@ Algoritmo TP_logicayestructura
 	valores[11] = 10
 	valores[12] = 10
 	
+//	carta1<-azar(13)
+	//	carta2<-azar(13)
+	
+	Mostrar 'Tu cata 1 es: ' cartas[carta1]
+	puntos= puntos+valores[carta1]
+	Mostrar 'Tu cata 1 es: ' cartas[carta2]
+	puntos= puntos+valores[carta2]
+	Mostrar 'Puntos actuales: ' puntos
+	
+	
 	// darle valor a las cartas
 	// A = 1 o 11 preguntarle al usuario que valor toma
 	// 2-10 cartas normales
@@ -55,13 +68,4 @@ FinAlgoritmo
 
 //declarar funciones
 
-Funcion iniciarJuego()
-	definir carta1, carta2 como entero
-	
-	carta1<-azar(13)
-	carta2<-azar(13)
-	
-	Mostrar carta1
-	Mostrar carta2
-	
-FinFuncion
+
