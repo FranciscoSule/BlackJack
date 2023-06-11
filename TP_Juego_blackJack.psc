@@ -80,7 +80,7 @@ Algoritmo TP_logicayestructura
 				leer pedido
 				
 				Si pedido = 'S' o pedido = 's' Entonces
-					carta3 = azar(13)
+					num_aleatorio = azar(13)
 					Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale "  valores[num_aleatorio]
 					puntos= puntos+valores[num_aleatorio]
 					Mostrar puntos
@@ -100,8 +100,6 @@ Algoritmo TP_logicayestructura
 			Mostrar puntos
 		FinSi
 	FinSi
-	
-	//Hay un error que cuando elegis que el as valga 1 y seguis pidiendo cartas, todas valen 1
 	
 	//Hay que hacer la casa
 	
