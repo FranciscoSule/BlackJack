@@ -2,6 +2,9 @@ Algoritmo TP_logicayestructura
 	
 	Definir cartas, pedido Como Caracter
 	Definir valores, num_aleatorio, i, carta1, carta2, carta3, puntos, ingreso Como Entero
+	Definir carta_casa como entero
+	Definir puntos_casa Como Entero
+	puntos_casa=0
 	ingreso=0
 	puntos=0
 	
@@ -102,9 +105,7 @@ Algoritmo TP_logicayestructura
 	FinSi
 	
 	Si puntos<21 Entonces
-		Definir carta_casa como entero
-		Definir puntos_casa Como Entero
-		puntos_casa=0
+		
 		
 		Escribir " "
 		Repetir
