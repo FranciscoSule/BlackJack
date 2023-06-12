@@ -110,13 +110,14 @@ Algoritmo TP_logicayestructura
 		Escribir " "
 		Repetir
 			carta_casa=azar(13)
-			si carta_casa = valores[0] Entonces
-				puntos_casa= puntos_casa+11
+			si puntos_casa<=11 Entonces
+				valores[0] =11
 			FinSi
 			Escribir "A la casa le toco " cartas[carta_casa] " que vale " valores[carta_casa]
 			puntos_casa = puntos_casa + valores[carta_casa]
 			Escribir " "
-		Hasta Que puntos_casa>=17
+			valores[0] =1
+		Hasta Que puntos_casa>=17 o puntos_casa>puntos
 		
 		Si puntos_casa>21 o puntos > puntos_casa Entonces
 			Escribir "Ganaste!!!!"
