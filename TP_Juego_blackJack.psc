@@ -11,6 +11,7 @@ Algoritmo TP_logicayestructura
 	Dimension cartas[13]
 	Dimension valores[13]
 	
+	// Asignar valores a las cartas
 	valores[0] = 1
 	valores[1] = 2
 	valores[2] = 3
@@ -25,6 +26,7 @@ Algoritmo TP_logicayestructura
 	valores[11] = 10
 	valores[12] = 10
 	
+	// Asignar nombres a las cartas
 	cartas[0] = "A"
 	cartas[1] = '2'
 	cartas[2] = '3'
@@ -39,13 +41,16 @@ Algoritmo TP_logicayestructura
 	cartas[11] = 'Q'
 	cartas[12] = 'K'
 	
+	// Repartir dos cartas al jugador
 	Para i=0 hasta 1 Con Paso 1 Hacer
 		num_aleatorio=azar(13)
 		
+		// Verificar si la carta es un As (A) y solicitar valor al jugador
 		Si num_aleatorio = 0 Entonces
 			Escribir 'Tu carta es A elija su valor : 1 o 11'
 			leer ingreso
 			
+			// Validar que el valor ingresado sea válido (1 o 11)
 			Si ingreso <> 1 y ingreso <> 11 Entonces
 				Escribir 'Error: Ingrese un valor válido (1 o 11)'
 				
@@ -54,11 +59,13 @@ Algoritmo TP_logicayestructura
 				Hasta Que ingreso = 1 o ingreso = 11
 			FinSi
 			
+			// Ajustar el valor de la carta As según la elección del jugador
 			Si ingreso = 11 Entonces
 				puntos= puntos+ingreso-1
 			FinSi
 		FinSi
 		
+		// Mostrar la carta obtenida y su valor
 		Si ingreso=11 Entonces
 			Escribir "Tu carta fue " cartas[num_aleatorio] " Que vale 11" 
 		Sino
@@ -66,6 +73,7 @@ Algoritmo TP_logicayestructura
 			
 		FinSi
 		
+		// Sumar los puntos obtenidos por la carta al total de puntos del jugador
 		puntos=puntos+valores[num_aleatorio]
 		ingreso=0
 	FinPara
@@ -73,9 +81,12 @@ Algoritmo TP_logicayestructura
 	Escribir " "
 	Escribir "Tu cantidad de puntos " puntos
 	
+	// Verificar si el jugador obtuvo Blackjack
 	Si puntos = 21 Entonces
 		Escribir 'BlackJack ¡HAS GANADO!'
 	SiNo
+		
+		// Solicitar una carta más al jugador
 		Si puntos < 21 Entonces
 			Repetir
 				Escribir '¿Quieres otra carta?'
@@ -89,12 +100,14 @@ Algoritmo TP_logicayestructura
 					Mostrar puntos
 				FinSi
 				
+				// Verificar si el jugador obtuvo Blackjack
 				Si puntos = 21 Entonces
 					pedido='p'
 					Escribir 'BlackJack ¡HAS GANADO!'
 					
 				FinSi
 				
+				// Verificar si el jugador se pasó de 21 puntos
 				Si puntos >21 Entonces
 					Escribir 'Perdiste'
 					pedido='p'
@@ -104,6 +117,7 @@ Algoritmo TP_logicayestructura
 		FinSi
 	FinSi
 	
+	// Jugar la mano de la casa
 	Si puntos<21 Entonces
 		
 		
@@ -119,6 +133,7 @@ Algoritmo TP_logicayestructura
 			valores[0] =1
 		Hasta Que puntos_casa>=17 o puntos_casa>puntos
 		
+		// Verificar resultados de la mano de la casa
 		Si puntos_casa>21 o puntos > puntos_casa Entonces
 			Escribir "Ganaste!!!!"
 		Sino 
