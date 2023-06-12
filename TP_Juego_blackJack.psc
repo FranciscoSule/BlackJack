@@ -110,6 +110,9 @@ Algoritmo TP_logicayestructura
 		Escribir " "
 		Repetir
 			carta_casa=azar(13)
+			si carta_casa = valores[0] Entonces
+				puntos_casa= puntos_casa+11
+			FinSi
 			Escribir "A la casa le toco " cartas[carta_casa] " que vale " valores[carta_casa]
 			puntos_casa = puntos_casa + valores[carta_casa]
 			Escribir " "
