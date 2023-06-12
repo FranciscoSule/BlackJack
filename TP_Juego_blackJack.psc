@@ -115,7 +115,7 @@ Algoritmo TP_logicayestructura
 			Escribir " "
 		Hasta Que puntos_casa>=17
 		
-		Si puntos_casa>21 Entonces
+		Si puntos_casa>21 o puntos > puntos_casa Entonces
 			Escribir "Ganaste!!!!"
 		Sino 
 			Si puntos_casa>puntos Entonces
