@@ -101,7 +101,34 @@ Algoritmo TP_logicayestructura
 		FinSi
 	FinSi
 	
-	//Hay que hacer la casa
+	Si puntos<21 Entonces
+		Definir carta_casa como entero
+		Definir puntos_casa Como Entero
+		puntos_casa=0
+		
+		Escribir " "
+		Repetir
+			carta_casa=azar(13)
+			Escribir "A la casa le toco " cartas[carta_casa] " que vale " valores[carta_casa]
+			puntos_casa = puntos_casa + valores[carta_casa]
+			Escribir " "
+		Hasta Que puntos_casa>=17
+		
+		Si puntos_casa>21 Entonces
+			Escribir "Ganaste!!!!"
+		Sino 
+			Si puntos_casa>puntos Entonces
+				Escribir "Perdiste :("
+			FinSi
+		FinSi
+		
+		Si puntos_casa=puntos Entonces
+			Escribir "Empate"
+		FinSi
+		
+		Escribir "Los puntos de la casa: " puntos_casa 
+	FinSi
+	
 	
     //La casa recibe dos cartas, Si tiene 16 o menos, está obligada a pedir otra carta. 
 	//Si tiene 17 o más se tiene que plantar
